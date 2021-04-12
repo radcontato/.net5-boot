@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevCars</name>
+    </assembly>
+    <members>
+        <member name="M:DevCars.Controllers.CarsController.Post(DevCars.InputModels.AddCarInputModel)">
+            <summary>
+            Cadastrar um Carro
+            </summary>
+            <remarks>
+            Requisicao de exemplo
+            {
+                "brand": "Honda",
+                "model": "Civic",
+                "vinCode": "abc123",
+                "year": "2021",
+                "color": "Cinza",
+                "productionDate": "2021-04-05"   
+            }
+            </remarks>
+            <param name="model">Dados de um novo Carro</param>
+            <returns>Objeto recem-criado</returns>
+            <response code="201"> Objeto criado com sucesso.</response>
+            <response code="400"> Dados Invalidos</response>
+        </member>
+        <member name="M:DevCars.Controllers.CarsController.Put(System.Int32,DevCars.InputModels.UpdateCarInputModel)">
+            <summary>
+            Atualizar dados de um Carro
+            </summary>
+            <remarks>
+            Requisicao de exemplo:
+            {
+                "color": "Vermelho",
+                "Price": "100000"
+            }
+            </remarks>
+            <param name="id">Identificador de um Carro</param>
+            <param name="model">Dados de alteracao</param>
+            <returns>bNao tem retorno</returns>
+            <response code="204">Atualizacao bem-sucedida</response>
+            <response code="400">Dados invalidos</response>
+            <response code="404">Carros nao encontrado</response>
+        </member>
+    </members>
+</doc>
